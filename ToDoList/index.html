@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="todo.css">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <title>To Do List</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>To Do List</h1>
+        <div class="inputlist">
+            <input type="text" id="input" placeholder="Add a new task">
+        </div>
+        <div class="controls">
+            <div class="filters">
+                <span class="active" id="alltask">All</span>
+                <span id="pending">Pending</span>
+                <span id="completed">Completed</span>
+            </div>
+            <button class="clear">Clear All</button>
+        </div>
+        <ul class="taskbox"></ul>
+    </div>
+    <script src="list.js"></script>
+</body>
+
+</html>
