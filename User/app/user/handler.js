@@ -32,8 +32,7 @@ module.exports = {
     }
   },
   handlerPostUser: async (req, res) => {
-    const { email, password, fullname, shortname, biodata, angkatan, jabatan } =
-      req.body;
+    const { email, password, fullname, shortname, biodata, angkatan, jabatan } = req.body;
     const hashPassword = await bcrypt.hash(password, 10);
     const user = await User.create({
       email,
