@@ -3,9 +3,6 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const userRouter = require("./app/user/route");
-const userRouterA = require("./app/authentication/route");
-const Handler404NotFound = require("./middleware/Handler404NotFound");
-const CustomErrorHandler = require("./middleware/CustomErrorHandler");
 
 const app = express();
 
@@ -16,9 +13,5 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/user", userRouter);
-app.use("/auth", userRouterA);
-
-app.use(Handler404NotFound);
-app.use(CustomErrorHandler);
 
 module.exports = app;
